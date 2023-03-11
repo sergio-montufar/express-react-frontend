@@ -4,7 +4,8 @@ import Index from "../pages/Index";
 import Show from "../pages/Show";
 
 export default (props) => {
-const URL = "https://express-react-backend-app.herokuapp.com";
+const URL = "https://express-react-backend-app.herokuapp.com/people";
+// const URL = "http://localhost:3000"
   const [people, setPeople] = useState(null);
 
   const getPeople = async () => {
@@ -53,7 +54,9 @@ const URL = "https://express-react-backend-app.herokuapp.com";
     getPeople();
   }
 
-  useEffect(() => getPeople, []);
+  useEffect(() => {
+    getPeople()
+  }, []);
 
   return (
     <main>
