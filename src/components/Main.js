@@ -5,7 +5,7 @@ import Show from "../pages/Show";
 
 export default (props) => {
 const URL = "https://express-react-backend-app.herokuapp.com";
-  const [people, setPeople] = useState([]);
+  const [people, setPeople] = useState(null);
 
   const getPeople = async () => {
     const response = await fetch(URL)

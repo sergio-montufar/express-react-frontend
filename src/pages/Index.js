@@ -74,7 +74,7 @@ export default (props) => {
         />
         <input type="submit" value="Create Person" />
       </form>
-      {props.people.length > 0 ? <Loaded /> : <Loading />}
+      {props.people ? <Loaded /> : <Loading />}
       {/* <Loaded /> */}
     </section>
     
