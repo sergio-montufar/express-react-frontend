@@ -3,9 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 
-const URL = "https://express-react-backend-app.herokuapp.com";
-
 export default (props) => {
+const URL = "https://express-react-backend-app.herokuapp.com";
   const [people, setPeople] = useState([]);
 
   const getPeople = async () => {
@@ -25,7 +24,7 @@ export default (props) => {
     // const newPerson = await newPersonData.json();
     // setPeople((prev) => prev.push(newPerson))
 
-    await fetch(URL, {
+    await fetch(`${URL}/${id}`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +36,7 @@ export default (props) => {
   }
 
   const updatePeople = async(person, id) => {
-    await fetch(URL + id, {
+    await fetch(`${URL}/${id}`, {
       method: "put",
       headers: {
         "Content-Type": "application/json"
