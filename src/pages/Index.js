@@ -36,17 +36,17 @@ export default (props) => {
         <img src={person.image} alt={person.name} />
         <h3>{person.title}</h3>
         </div>
-      ))
-        
-    
-
-    ) 
+      ))) 
     
   }
 
   const Loading = () => {
     return <h1>Loading...</h1>
   }
+
+  const MainScreenContent = useMemo(() => {
+    return props.people ? <Loaded /> : <Loading />
+  })
 
   return (
     <section>
@@ -74,7 +74,7 @@ export default (props) => {
         />
         <input type="submit" value="Create Person" />
       </form>
-      {props.people ? <Loaded /> : <Loading />}
+      {MainScreenContent}
       {/* <Loaded /> */}
     </section>
     
