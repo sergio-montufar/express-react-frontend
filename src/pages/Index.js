@@ -45,6 +45,7 @@ export default (props) => {
   }
 
   const MainScreenContent = useMemo(() => {
+    console.log(props.people)
     return props.people ? <Loaded /> : <Loading />
   })
 
