@@ -24,7 +24,7 @@ const URL = "https://express-react-backend-app.herokuapp.com";
     // const newPerson = await newPersonData.json();
     // setPeople((prev) => prev.push(newPerson))
 
-    await fetch(`${URL}/${id}`, {
+    await fetch(URL, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
