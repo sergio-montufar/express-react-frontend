@@ -4,9 +4,10 @@
 
 // export default Header
 
-// eslint-disable-next-line import/no-anonymous-default-export
+
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
   return (
     <nav className="nav">
