@@ -25,7 +25,7 @@ export default (props) => {
 
   const handleDelete = () => {
     props.deletePeople(id);
-    navigate("/")
+    navigate("/");
   }
 
   return (

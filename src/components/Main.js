@@ -50,7 +50,7 @@ const URL = "https://express-react-backend-app.herokuapp.com/people";
   }
 
   const deletePeople = async(id) => {
-    await fetch(URL + id, {
+    await fetch(`${URL}/${id}`, {
       method: "delete"
     });
     getPeople();
