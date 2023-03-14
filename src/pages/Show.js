@@ -1,11 +1,12 @@
-import { useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
   const {id} = useParams();
-  const navigate = useNavigate()
-  const people = props.people
-  const person = people.find((p) => p._id === id)
+  const navigate = useNavigate();
+  const people = props.people;
+  const person = people.find((p) => p._id === id);
 
   const [editForm, setEditForm] = useState(person)
 

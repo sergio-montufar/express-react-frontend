@@ -4,6 +4,7 @@
 
 // export default Header
 
+// eslint-disable-next-line import/no-anonymous-default-export
 import { Link } from "react-router-dom";
 
 export default (props) => {

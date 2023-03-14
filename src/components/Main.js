@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 
+
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
 const URL = "https://express-react-backend-app.herokuapp.com/people";
 // const URL = "http://localhost:3000"
